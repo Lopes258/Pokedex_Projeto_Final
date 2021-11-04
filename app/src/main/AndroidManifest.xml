@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dh.grupo3.pokedex">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/poke"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/poke"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Pokedex">
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true" />
+
+           <activity
+            android:name=".activities.PokemonListActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".activities.PokemonFavoriteListActivity"
+            android:exported="true"
+            android:label="@string/title_activity_pokemon_favorite_list"
+            android:theme="@style/Theme.Pokedex.NoActionBar" />
+
+        <activity android:name=".activities.PokemonDetailsActivity" />
+
+        <activity
+            android:name=".activities.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
