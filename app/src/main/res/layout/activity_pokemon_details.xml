@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/cardDetail"
     tools:context=".activities.PokemonDetailsActivity">
+
+
+    <ImageView
+        android:id="@+id/pokeImage"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:src="@drawable/pokeball"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBar"
+        app:tint="@color/gray" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -60,7 +72,7 @@
         android:id="@+id/tv_typeInfo1"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_pokemon_type"
+        android:background="@color/gray"
         tools:text="FIRE"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -75,7 +87,7 @@
         android:id="@+id/tv_typeInfo2"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_pokemon_type"
+        android:background="@color/gray"
         tools:text="POISON"
         android:textColor="@color/white"
         android:textStyle="bold"

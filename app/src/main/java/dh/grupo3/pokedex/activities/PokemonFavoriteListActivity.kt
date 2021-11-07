@@ -4,9 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import dh.grupo3.pokedex.R
-
 import dh.grupo3.pokedex.adapter.RecyclerAdapterMain
 import dh.grupo3.pokedex.database.AppDatabase
 import dh.grupo3.pokedex.database.entity.PokemonEntity
@@ -22,8 +21,8 @@ class PokemonFavoriteListActivity : AppCompatActivity() {
     private val adapter by lazy {
         RecyclerAdapterMain(context = this)
     }
-    private val layoutManager by lazy {
-        LinearLayoutManager(this)
+    private val gridLayoutManager by lazy {
+        GridLayoutManager(this,2)
     }
 
     private val viewModel by lazy {
@@ -50,7 +49,7 @@ class PokemonFavoriteListActivity : AppCompatActivity() {
     }
 
     private fun startConfig() {
-        recycleView_main.layoutManager = layoutManager
+        recycleView_main.layoutManager = gridLayoutManager
         recycleView_main.adapter = adapter
         adapter.onItemClicked = ::openPokemonDetails
     }

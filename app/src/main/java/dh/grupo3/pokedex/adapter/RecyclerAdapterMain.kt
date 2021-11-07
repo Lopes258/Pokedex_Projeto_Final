@@ -9,11 +9,12 @@ import android.view.ViewGroup
 import android.widget.Filter
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.recyclerview.widget.RecyclerView
-import dh.grupo3.pokedex.database.entity.PokemonEntity
-import dh.grupo3.pokedex.util.changeTypeColor
 import com.squareup.picasso.Picasso
 import dh.grupo3.pokedex.R
+import dh.grupo3.pokedex.database.entity.PokemonEntity
+import dh.grupo3.pokedex.util.changeTypeColor
 import kotlinx.android.synthetic.main.card_pokemon.view.*
+import java.util.*
 
 class RecyclerAdapterMain(
     private val context: Context,
@@ -108,38 +109,47 @@ class RecyclerAdapterMain(
             when {
                 pokemon.id < 10 -> {
                     "#00${pokemon.id}".also {
-                        itemView.tv_pokemonID.text = it
+                        itemView.txtPokemonNumber.text = it
                     }
                 }
                 pokemon.id < 100 -> {
-                    "#0${pokemon.id}".also { itemView.tv_pokemonID.text = it }
+                    "#0${pokemon.id}".also { itemView.txtPokemonNumber.text = it }
                 }
                 else -> {
-                    "#${pokemon.id}".also { itemView.tv_pokemonID.text = it }
+                    "#${pokemon.id}".also { itemView.txtPokemonNumber.text = it }
                 }
             }
-            itemView.pokemon_name.text = pokemon.name.capitalize()
+            itemView.txtPokemonName.text = pokemon.name.replaceFirstChar {
+                if (it.isLowerCase()) it.titlecase(
+                    Locale.getDefault()
+                ) else it.toString()
+            }
             Picasso.get()
                 .load(pokemon.image)
                 .error(R.drawable.who_is_the_pokemon)
-                .into(itemView.pokemon_image)
+                .into(itemView.imgCall)
 
             val typeName = pokemon.type1
-            itemView.pokemon_type1.text = typeName.capitalize()
-            val unwrappedDrawable = itemView.pokemon_type1.background
+            itemView.poke_type_1.text = typeName.replaceFirstChar {
+                if (it.isLowerCase()) it.titlecase(
+                    Locale.getDefault()
+                ) else it.toString()
+            }
+            val unwrappedDrawable = itemView.cvPokemon.background
             val wrappedDrawable = DrawableCompat.wrap(unwrappedDrawable)
             changeTypeColor(typeName, wrappedDrawable)
 
             if (pokemon.type2 != null) {
-                itemView.pokemon_type2.visibility = VISIBLE
+                itemView.poke_type_2.visibility = VISIBLE
                 val typeName2 = pokemon.type2
-                itemView.pokemon_type2.text = typeName2.capitalize()
-                val unwrappedDrawable2 = itemView.pokemon_type2.background
-                val wrappedDrawable2 = DrawableCompat.wrap(unwrappedDrawable2)
-                changeTypeColor(typeName2, wrappedDrawable2)
+                itemView.poke_type_2.text = typeName2.replaceFirstChar {
+                    if (it.isLowerCase()) it.titlecase(
+                        Locale.getDefault()
+                    ) else it.toString()
+                }
 
             } else {
-                itemView.pokemon_type2.visibility = GONE
+                itemView.poke_type_2.visibility = GONE
             }
         }
     }

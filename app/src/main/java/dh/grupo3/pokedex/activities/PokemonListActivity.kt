@@ -6,8 +6,11 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
+import com.squareup.picasso.Picasso
+import dh.grupo3.pokedex.R
 import dh.grupo3.pokedex.adapter.RecyclerAdapterMain
 import dh.grupo3.pokedex.database.AppDatabase
 import dh.grupo3.pokedex.database.entity.PokemonEntity
@@ -16,14 +19,11 @@ import dh.grupo3.pokedex.repository.Resource
 import dh.grupo3.pokedex.util.POKEMON_CHAVE
 import dh.grupo3.pokedex.viewmodel.PokemonListActivityViewModel
 import dh.grupo3.pokedex.viewmodel.factory.PokemonListActivityViewModelFactory
-import com.google.android.material.snackbar.Snackbar
-import dh.grupo3.pokedex.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.materialAppBar
 import kotlinx.android.synthetic.main.activity_main.recycleView_main
 import kotlinx.android.synthetic.main.activity_pokemon_details.*
 import kotlinx.android.synthetic.main.activity_pokemon_favorite_list.*
-import com.squareup.picasso.Picasso
 
 const val LOAD_ERROR = "Erro para carregar lista"
 
@@ -33,7 +33,7 @@ class PokemonListActivity : AppCompatActivity() {
         RecyclerAdapterMain(context = this)
     }
     private val layoutManager by lazy {
-        LinearLayoutManager(this)
+        GridLayoutManager(this,2)
     }
     private val viewModel by lazy {
         val repository = PokemonRepository(AppDatabase.getInstance(this).pokemonDAO)

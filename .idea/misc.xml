@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Lucas Guilherme/Projetos/pokedexDH/app/src/main/res/layout/activity_pokemon_details.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/Lucas Guilherme/Projetos/pokedexDH/app/src/main/res/layout/activity_pokemon_favorite_list.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/Lucas Guilherme/Projetos/pokedexDH/app/src/main/res/layout/activity_splash_screen.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/Lucas Guilherme/Projetos/pokedexDH/app/src/main/res/layout/card_pokemon.xml" value="0.33" />
+        <entry key="..\:/Users/Lucas Guilherme/Projetos/pokedexDH/app/src/main/res/layout/fragment_menu.xml" value="0.20625" />
+        <entry key="..\:/Users/Lucas Guilherme/Projetos/pokedexDH/app/src/main/res/menu/main.xml" value="0.36770833333333336" />
         <entry key="..\:/Users/filipe.santos/Documents/kotlin/pokedexDH/app/src/main/res/drawable-v24/background_item_pokemon.xml" value="0.18020833333333333" />
         <entry key="..\:/Users/filipe.santos/Documents/kotlin/pokedexDH/app/src/main/res/drawable-v24/background_item_pokemon_span.xml" value="0.13854166666666667" />
         <entry key="..\:/Users/filipe.santos/Documents/kotlin/pokedexDH/app/src/main/res/drawable-v24/layout_bg.xml" value="0.19583333333333333" />

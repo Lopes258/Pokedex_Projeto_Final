@@ -23,4 +23,8 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="favorites">Favorites</string>
+    <string name="flying">Flying</string>
+    <string name="nome_pokemon">Name</string>
+    <string name="numero_pokemon">#001</string>
+    <string name="bug">Bug</string>
 </resources>
