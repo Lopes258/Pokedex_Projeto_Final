@@ -45,38 +45,58 @@
         app:layout_constraintStart_toStartOf="@id/flFundoBranco"
         app:layout_constraintTop_toTopOf="@id/flFundoBranco" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:text="@string/e_mail"
+        app:layout_constraintTop_toTopOf="@id/tfEmail"
+        app:layout_constraintStart_toStartOf="@id/tfEmail"
+        android:layout_marginStart="35dp"
+        android:textStyle="bold">
+
+    </TextView>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tfEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/flFundoBranco"
         app:layout_constraintTop_toBottomOf="@id/tvLogin"
         app:layout_constraintEnd_toEndOf="@id/flFundoBranco"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp">
 
+
         <EditText
             android:id="@+id/edt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:foregroundTint="#5E3030"
             android:background="#DDDDDD"
-            android:hint="@string/e_mail"
-            android:padding="10dp"
-            android:textColorHint="@color/white" />
+            android:layout_marginBottom="@dimen/small"
+            android:textSize="16sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:text="@string/password"
+        app:layout_constraintTop_toTopOf="@id/tfSenha"
+        app:layout_constraintStart_toStartOf="@id/tfSenha"
+        android:layout_marginStart="35dp"
+        android:textStyle="bold">
 
+    </TextView>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tfSenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Senha"
         app:hintTextColor="@color/black"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/flFundoBranco"
@@ -92,7 +112,6 @@
             android:layout_height="wrap_content"
             android:foregroundTint="#5E3030"
             android:background="#DDDDDD"
-            android:hint="@string/senha"
             android:padding="10dp"
             android:textColorHint="@color/white" />
 

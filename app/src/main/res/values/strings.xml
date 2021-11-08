@@ -5,7 +5,7 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="entrar">Entrar</string>
     <string name="login_cadastro"><u>Login</u></string>
-    <string name="e_mail">E-Mail</string>
+    <string name="e_mail">E-Mail :</string>
     <string name="senha">Senha</string>
     <string name="esquecer"><u>Esqueceu a senha?</u> </string>
     <string name="filter">Filter</string>
@@ -28,4 +28,5 @@
     <string name="nome_pokemon">Name</string>
     <string name="numero_pokemon">#001</string>
     <string name="bug">Bug</string>
+    <string name="password">Password :</string>
 </resources>
