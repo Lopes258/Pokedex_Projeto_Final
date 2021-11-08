@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -27,6 +28,11 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         val btn_google = findViewById<Button>(R.id.btn_google)
+        val btn_cadastrar = findViewById<Button>(R.id.btn_Cadastrar)
+        val btn_entrar = findViewById<Button>(R.id.btn_entrar)
+
+        var email1 = findViewById<EditText>(R.id.edt_email)
+        var senha1 = findViewById<EditText>(R.id.edt_senha)
 
         val gso = GoogleSignInOptions
             .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -38,6 +44,34 @@ class LoginActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         btn_google.setOnClickListener { signIn() }
+
+        btn_cadastrar.setOnClickListener {
+            val cadastro = Intent(this, CadastroActivity::class.java)
+            startActivity(cadastro)
+        }
+
+        btn_entrar.setOnClickListener {
+
+            var email = email1.text.toString().trim()
+            var senha = senha1.text.toString().trim()
+
+            auth.signInWithEmailAndPassword(email, senha)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        // Sign in success, update UI with the signed-in user's information
+                        val user = auth.currentUser
+                        val ini = Intent(this, PokemonListActivity::class.java)
+                        startActivity(ini)
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        Log.w("E", "signInWithEmail:failure", task.exception)
+                        Toast.makeText(baseContext, "Erro na autenticação",
+                            Toast.LENGTH_SHORT).show()
+                    }
+                }
+        }
+
+
 
         }
 
@@ -81,4 +115,6 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
     }
-    }
+
+
+}

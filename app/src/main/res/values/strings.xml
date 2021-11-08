@@ -2,7 +2,8 @@
     <string name="app_name">Pokédex</string>
     <string name="login">Login</string>
     <string name="cadastro">Cadastro</string>
-    <string name="cadastrar"><u>Cadastrar</u></string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="entrar">Entrar</string>
     <string name="login_cadastro"><u>Login</u></string>
     <string name="e_mail">E-Mail</string>
     <string name="senha">Senha</string>

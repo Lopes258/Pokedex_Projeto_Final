@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FF5154"
-    tools:context=".activities.LoginActivity">
+    tools:context=".activities.CadastroActivity">
 
     <ImageView
         android:id="@+id/imgPokebola"
@@ -34,17 +32,15 @@
         android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
-        android:text="@string/login"
+        android:text="@string/cadastrar"
         android:textAllCaps="true"
         android:textColor="#667383"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/tfSenha"
+        app:layout_constraintEnd_toEndOf="@+id/flFundoBranco"
         app:layout_constraintStart_toStartOf="@id/flFundoBranco"
         app:layout_constraintTop_toTopOf="@id/flFundoBranco" />
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tfEmail"
@@ -76,7 +72,6 @@
         android:id="@+id/tfSenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Senha"
         app:hintTextColor="@color/black"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/flFundoBranco"
@@ -98,9 +93,10 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <Button
-        android:id="@+id/btn_Cadastrar"
-        android:layout_width="138dp"
+        android:id="@+id/btn_cadastrar"
+        android:layout_width="246dp"
         android:layout_height="58dp"
         android:backgroundTint="#FF5154"
         android:text="@string/cadastrar"
@@ -108,32 +104,6 @@
         app:layout_constraintBottom_toBottomOf="@id/flFundoBranco"
         app:layout_constraintStart_toStartOf="@id/flFundoBranco"
         app:layout_constraintEnd_toEndOf="@id/flFundoBranco"
-        app:layout_constraintTop_toBottomOf="@id/btn_entrar" />
-
-    <Button
-        android:id="@+id/btn_entrar"
-        android:layout_width="138dp"
-        android:layout_height="58dp"
-        android:backgroundTint="#FF5154"
-        android:text="@string/entrar"
-        android:background="@drawable/roundshapebtn"
-        app:layout_constraintBottom_toBottomOf="@id/flFundoBranco"
-        app:layout_constraintStart_toStartOf="@id/flFundoBranco"
-        app:layout_constraintEnd_toEndOf="@id/flFundoBranco"
-        app:layout_constraintTop_toBottomOf="@id/tfEmail"/>
-
-    <Button
-        android:id="@+id/btn_google"
-        android:layout_width="138dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/roundshapebtn"
-        android:text="Google"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/flFundoBranco" />
+        app:layout_constraintTop_toBottomOf="@id/tfSenha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

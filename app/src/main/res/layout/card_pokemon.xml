@@ -13,13 +13,13 @@
     app:cardElevation="6dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="407dp"
+        android:layout_height="100dp">
 
         <ImageView
             android:id="@+id/imgCall"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_marginStart="20dp"
             android:contentDescription="TODO"
             android:scaleType="centerCrop"
@@ -53,7 +53,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-
         <TextView
             android:id="@+id/poke_type_1"
             android:layout_width="wrap_content"
@@ -61,7 +60,7 @@
             android:layout_marginStart="@dimen/small"
             android:layout_marginTop="@dimen/small"
             android:layout_marginBottom="@dimen/small"
-            android:background="@color/gray"
+            android:background="@drawable/background_item_pokemon_span"
             android:text="@string/flying"
             android:textColor="@color/white"
             android:textSize="11sp"
@@ -77,7 +76,7 @@
             android:layout_marginStart="@dimen/small"
             android:layout_marginTop="@dimen/small"
             android:layout_marginBottom="@dimen/small"
-            android:background="@color/gray"
+            android:background="@drawable/background_item_pokemon"
             android:text="@string/bug"
             android:textColor="@color/white"
             android:textSize="11sp"
